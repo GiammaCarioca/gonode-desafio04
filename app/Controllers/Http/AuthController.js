@@ -1,6 +1,6 @@
 'use strict'
 
-class SessionController {
+class AuthController {
   async store ({ request, response, auth }) {
     const { email, password } = request.all()
 
@@ -10,4 +10,4 @@ class SessionController {
   }
 }
 
-module.exports = SessionController
+module.exports = AuthController

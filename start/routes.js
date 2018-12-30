@@ -2,7 +2,14 @@
 
 const Route = use('Route')
 
+/**
+ * User routes
+ */
 Route.post('users', 'UserController.store')
-Route.post('sessions', 'SessionController.store')
+Route.put('users', 'UserController.update')
 
-Route.post('passwords', 'ForgotPasswordController.store')
+/**
+ * Auth routes
+ */
+Route.post('auth', 'AuthController.store')
+Route.put('passwords', 'PasswordController.update')
