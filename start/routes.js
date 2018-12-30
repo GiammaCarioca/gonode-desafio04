@@ -2,14 +2,12 @@
 
 const Route = use('Route')
 
-/**
- * User routes
- */
 Route.post('users', 'UserController.store')
 Route.put('users', 'UserController.update')
 
-/**
- * Auth routes
- */
 Route.post('auth', 'AuthController.store')
 Route.put('passwords', 'PasswordController.update')
+
+Route.group(() => {
+  Route.resource('events', 'EventController').apiOnly()
+}).middleware(['auth'])
