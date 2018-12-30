@@ -16,7 +16,8 @@ class EventSchema extends Schema {
         .onDelete('SET NULL')
       table.string('title').notNullable()
       table.string('location').notNullable()
-      table.datetime('dt').notNullable()
+      table.date('date').notNullable()
+      table.time('time').notNullable()
       table.timestamps()
     })
   }
